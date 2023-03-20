@@ -1,4 +1,5 @@
 import requests
+import json
 
 class search_google():
     busca="roupas"
@@ -10,4 +11,7 @@ class search_google():
     }
     response = requests.request("GET", url, headers=headers, data=payload, files=files)
 
-    print(response.text)
+    #print(response.text)
+    #print(str(response.status_code).strip(".").strip("\nF"))
+    response_json=json.loads(response.text)
+    print(response_json['queries']['request']['title'])
