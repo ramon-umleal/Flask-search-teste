@@ -3,7 +3,7 @@ from flask import Flask, jsonify
 app = Flask(__name__)
 
 
-@app.route('/searchCars', methods=['POST'])
+@app.route('/search', methods=['POST'])
 def search_cars():
     response = ""
     return jsonify(response)
