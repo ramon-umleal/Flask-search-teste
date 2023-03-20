@@ -2,7 +2,7 @@ import requests
 
 class search_google():
     busca="roupas"
-    url = "https://www.googleapis.com/customsearch/v1?key=AIzaSyBDmtae1gZhrLYIUEzkuSezg3RXHr8tYJQ&cx=017576662512468239146:omuauf_lfve&q="+busca
+    url = "https://www.googleapis.com/customsearch/v1?key=AIzaSyDiRpTrkepY4JiTdED2f_Ilm8xhn1J-YEk&cx=a0d0f6a8489aa466b&q="+busca
     payload={}
     files={}
     headers = {
