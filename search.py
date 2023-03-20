@@ -2,7 +2,7 @@ import requests
 import json
 
 class search_google():
-    busca="roupas"
+    busca="jogos"
     url = "https://www.googleapis.com/customsearch/v1?key=AIzaSyDiRpTrkepY4JiTdED2f_Ilm8xhn1J-YEk&cx=a0d0f6a8489aa466b&q="+busca
     payload={}
     files={}
@@ -14,4 +14,10 @@ class search_google():
     #print(response.text)
     #print(str(response.status_code).strip(".").strip("\nF"))
     response_json=json.loads(response.text)
-    print(response_json['queries']['request']['title'])
+    
+    print(response_json['queries']['request'][0]['searchTerms'])
+    print(response_json['queries']['request'][0]['title'])
+    print(response_json['queries']['request'][0]['totalResults'])
+    print(response_json['items'][0]['link'])
+
+  
